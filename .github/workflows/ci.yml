@@ -1,0 +1,40 @@
+name: Java CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-java@v6.1.0
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+      - name: Test and package
+        run: ./gradlew clean build installDist --no-daemon
+      - name: Verify packaged launch
+        run: |
+          cd "$(mktemp -d)"
+          printf 'quit\n' | java -jar "$GITHUB_WORKSPACE/build/libs/citadels-cli-1.0.0.jar"
+          printf 'quit\n' | "$GITHUB_WORKSPACE/build/install/citadels-cli/bin/citadels-cli"
+      - name: Upload verification reports
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: verification-reports
+          path: |
+            build/reports/tests/test/
+            build/reports/jacoco/test/
+            build/test-results/test/
+          if-no-files-found: warn

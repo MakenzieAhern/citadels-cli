@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-23",
+  "environment": {
+    "os": "macOS",
+    "java": "Microsoft OpenJDK 17.0.16",
+    "gradle": "8.10"
+  },
+  "command": "./gradlew clean build installDist --no-daemon",
+  "tests": {
+    "tests": 83,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "suites": [
+    {
+      "name": "citadels.AppTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.ArchitectTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.AssassinTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.BishopTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.CharacterCardTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.DistrictCardInfoCommandTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.DistrictCardLoaderTest",
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.DistrictCardTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.GameStateStoreTest",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.GameTest",
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.KingTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.MagicianTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.MerchantTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.PlayerTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.ThiefTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "citadels.WarlordTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "coverage": {
+    "instruction": {
+      "covered": 4292,
+      "missed": 376,
+      "percent": 91.95
+    },
+    "branch": {
+      "covered": 410,
+      "missed": 118,
+      "percent": 77.65
+    },
+    "line": {
+      "covered": 724,
+      "missed": 53,
+      "percent": 93.18
+    },
+    "complexity": {
+      "covered": 322,
+      "missed": 106,
+      "percent": 75.23
+    },
+    "method": {
+      "covered": 144,
+      "missed": 7,
+      "percent": 95.36
+    },
+    "class": {
+      "covered": 19,
+      "missed": 0,
+      "percent": 100.0
+    }
+  },
+  "packagedChecks": {
+    "jarSession": "passed",
+    "freshProcessResume": "passed",
+    "checkpointAfterResumeMatches": "passed",
+    "installedLauncher": "passed",
+    "workingDirectory": "unrelated temporary directory"
+  }
+}
