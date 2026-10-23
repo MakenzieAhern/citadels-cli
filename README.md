@@ -122,16 +122,7 @@ The JAR includes the district catalogue and JSON dependency. It requires Java 17
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    A[App / command-line arguments] --> G[Game / round and turn state]
-    G --> P[Player / hand, city, gold]
-    G --> C[Eight character roles]
-    G --> D[DistrictCardLoader]
-    D --> T[cards.tsv / bundled catalogue]
-    G --> S[GameState / detached checkpoint]
-    S --> J[GameStateStore / validated JSON]
-```
+![Citadels CLI architecture](docs/images/architecture.svg)
 
 The game keeps role selection and ranked turns explicit, so advancing the turn does not recursively replay earlier actions. Save loading validates a detached snapshot before replacing live state. This separates malformed-file handling from the running game.
 
